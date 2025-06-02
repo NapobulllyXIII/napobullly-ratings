@@ -1,0 +1,40 @@
+{
+  "film": [
+    {
+      "id": 1,
+      "titolo": "Inception",
+      "voto": 9,
+      "commento": "Fantastico thriller sci-fi."
+    }
+  ],
+  "serie": [
+    {
+      "id": 2,
+      "titolo": "Breaking Bad",
+      "voto": 10,
+      "commento": "Capolavoro assoluto."
+    }
+  ],
+  "musica": [
+    {
+      "id": 3,
+      "titolo": "Abbey Road",
+      "voto": 9.5,
+      "commento": "L'ultimo capolavoro dei Beatles.",
+      "brani": [
+        {
+          "titolo": "Come Together",
+          "voto": 9,
+          "durata": "4:20",
+          "commento": "Iconica apertura."
+        },
+        {
+          "titolo": "Something",
+          "voto": 10,
+          "durata": "3:03",
+          "commento": "Una delle più belle ballate."
+        }
+      ]
+    }
+  ]
+}

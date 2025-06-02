@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Le Mie Valutazioni</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Le Mie Valutazioni</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#film">Film</a></li>
+      <li><a href="#serie">Serie TV</a></li>
+      <li><a href="#musica">Album Musicali</a></li>
+      <li style="margin-left:auto;"><a href="admin.html">⚙️ Admin</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="film">
+      <h2>Film</h2>
+      <div class="valutazioni-container" id="film-container">
+        <div class="valutazione-card">
+          <h3>Inception</h3>
+          <p>Fantascienza, Thriller. Un viaggio nei sogni e nella mente.</p>
+          <span class="voto">9.0 / 10</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="serie">
+      <h2>Serie TV</h2>
+      <div class="valutazioni-container" id="serie-container">
+        <div class="valutazione-card">
+          <h3>Breaking Bad</h3>
+          <p>Un professore diventa un boss della droga per salvare la sua famiglia.</p>
+          <span class="voto">9.5 / 10</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="musica">
+      <h2>Album Musicali</h2>
+      <div class="valutazioni-container" id="musica-container">
+        <div class="valutazione-card">
+          <h3>Random Access Memories</h3>
+          <p>Daft Punk - Un tributo al pop e alla disco anni '70 e '80.</p>
+          <span class="voto">8.7 / 10</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <span id="close-popup">&times;</span>
+      <h3 id="popup-titolo"></h3>
+      <ul id="popup-brani"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

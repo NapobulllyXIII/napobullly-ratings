@@ -1,0 +1,310 @@
+/* Reset e font moderni */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f0f2f5;
+  color: #333;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background-color: #2d89ef;
+  color: white;
+  padding: 20px 40px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+/* Navbar */
+nav {
+  background-color: white;
+  padding: 10px 40px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #2d89ef;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+nav ul li a:hover {
+  background-color: #e0ecff;
+}
+
+/* Sezioni principali */
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #2d89ef;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 8px;
+}
+
+/* Container delle valutazioni */
+.valutazioni-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Card valutazione */
+.valutazione-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.valutazione-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.valutazione-card h3 {
+  font-size: 1.2rem;
+  color: #2d89ef;
+  margin: 0 0 10px;
+}
+
+.valutazione-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.valutazione-card .voto {
+  margin-top: auto;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #1b5fbd;
+  background-color: #e8f0fe;
+  padding: 6px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  align-self: flex-start;
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  position: relative;
+  animation: popup-fade 0.3s ease;
+}
+
+@keyframes popup-fade {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+#close-popup {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+}
+
+#close-popup:hover {
+  color: #000;
+}
+
+/* Elementi nascosti */
+.hidden {
+  display: none !important;
+}
+
+/* Form, pulsanti e controlli */
+input, select, textarea, button {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+button {
+  cursor: pointer;
+  background-color: #2d89ef;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1b5fbd;
+}
+
+.form-wrapper {
+  max-width: 600px;
+  background: white;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.form-wrapper h2,
+.form-wrapper h3 {
+  color: #2d89ef;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+/* Pulsanti azioni admin */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.button-group button {
+  flex: 1;
+  min-width: 160px;
+  font-size: 1rem;
+  padding: 12px 20px;
+  background-color: #2d89ef;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.button-group button:hover {
+  background-color: #1b5fbd;
+}
+
+/* Liste valutazioni admin */
+#lista-film, #lista-serie, #lista-musica,
+#mod-film, #mod-serie, #mod-musica {
+  margin-top: 15px;
+}
+
+.remove-item, .modify-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  background: #f9f9f9;
+  padding: 10px 14px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.remove-item button, .modify-item button {
+  background-color: #d9534f;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-item button:hover, .modify-item button:hover {
+  background-color: #c9302c;
+}
+
+/* Album tracks input */
+#tracks-container,
+#modify-tracks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.track-input {
+  display: flex;
+  gap: 10px;
+}
+
+.track-input input {
+  flex: 1;
+}
+
+.remove-track-btn {
+  width: 35px;
+  background-color: #d9534f;
+  font-weight: bold;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.remove-track-btn:hover {
+  background-color: #c9302c;
+}
+
+/* Upload info */
+#admin-upload p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 10px;
+}

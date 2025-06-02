@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Area Admin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">🏠 Torna alla Home</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="login-section" class="form-wrapper">
+      <h2>Accesso Admin</h2>
+      <form id="login-form">
+        <input type="text" id="username" placeholder="Username" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <button type="submit">Accedi</button>
+      </form>
+    </section>
+
+    <section id="admin-buttons" class="form-wrapper hidden">
+      <h2>Seleziona un'azione</h2>
+      <div class="button-group">
+        <button id="btn-add">➕ Aggiungi</button>
+        <button id="btn-remove">🗑️ Rimuovi</button>
+        <button id="btn-modify">✏️ Modifica</button>
+        <button id="btn-upload">📂 Carica da file</button>
+      </div>
+    </section>
+
+    <!-- Aggiungi -->
+    <section id="admin-add" class="form-wrapper hidden">
+      <h2>Aggiungi una valutazione</h2>
+      <form id="valutazione-form">
+        <select id="categoria" required>
+          <option value="film">Film</option>
+          <option value="serie">Serie TV</option>
+          <option value="musica">Album Musicale</option>
+        </select>
+        <input type="text" id="titolo" placeholder="Titolo" required />
+        <input type="number" id="voto" placeholder="Voto (1-10)" min="1" max="10" required />
+        <textarea id="commento" placeholder="Commento" required></textarea>
+
+        <div id="album-tracks-section" class="hidden">
+          <h3>Brani dell'album</h3>
+          <div id="tracks-container"></div>
+          <button type="button" id="add-track-btn">+ Aggiungi brano</button>
+        </div>
+
+        <button type="submit">Salva</button>
+      </form>
+    </section>
+
+    <!-- Rimuovi -->
+    <section id="admin-remove" class="form-wrapper hidden">
+      <h2>Rimuovi una valutazione</h2>
+      <div id="lista-film"></div>
+      <div id="lista-serie"></div>
+      <div id="lista-musica"></div>
+    </section>
+
+    <!-- Modifica -->
+    <section id="admin-modify" class="form-wrapper hidden">
+      <h2>Modifica una valutazione</h2>
+      <div id="modify-list">
+        <h3>Film</h3>
+        <div id="mod-film"></div>
+        <h3>Serie TV</h3>
+        <div id="mod-serie"></div>
+        <h3>Album Musicale</h3>
+        <div id="mod-musica"></div>
+      </div>
+
+      <form id="modify-form" class="hidden">
+        <input type="hidden" id="modify-categoria" />
+        <input type="hidden" id="modify-index" />
+        <input type="text" id="modify-titolo" placeholder="Titolo" required />
+        <input type="number" id="modify-voto" placeholder="Voto (1-10)" min="1" max="10" required />
+        <textarea id="modify-commento" placeholder="Commento" required></textarea>
+
+        <div id="modify-tracks-section" class="hidden">
+          <h3>Brani dell'album</h3>
+          <div id="modify-tracks-container"></div>
+          <button type="button" id="modify-add-track-btn">+ Aggiungi brano</button>
+        </div>
+
+        <button type="submit">Salva modifica</button>
+      </form>
+    </section>
+
+    <!-- Caricamento da file -->
+    <section id="admin-upload" class="form-wrapper hidden">
+      <h2>Carica più valutazioni da file JSON</h2>
+      <p>Formato JSON esempio nel README (vedi sotto)</p>
+      <input type="file" id="file-input" accept=".json" />
+      <button id="upload-confirm-btn">Carica</button>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
